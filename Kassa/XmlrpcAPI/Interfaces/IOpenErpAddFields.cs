@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace XmlrpcAPI.Interfaces
 {
-    [XmlRpcUrl(" http://10.3.56.23:8069/xmlrpc/2/base")]
+    [XmlRpcUrl(" http://10.3.56.23:8069/xmlrpc/2/object")]
     public interface IOpenErpAddFields : IXmlRpcProxy
     {
         [XmlRpcMethod("execute")]

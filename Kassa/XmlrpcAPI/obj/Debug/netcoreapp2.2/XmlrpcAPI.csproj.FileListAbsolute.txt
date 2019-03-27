@@ -12,3 +12,17 @@ C:\Users\Yasmine\source\repos\Kassa\XmlrpcAPI\obj\Debug\netcoreapp2.2\XmlrpcAPI.
 C:\Users\Yasmine\source\repos\Kassa\XmlrpcAPI\bin\Debug\netcoreapp2.2\XmlrpcAPI.pdb
 C:\Users\Yasmine\source\repos\Kassa\XmlrpcAPI\obj\Debug\netcoreapp2.2\XmlrpcAPI.dll
 C:\Users\Yasmine\source\repos\Kassa\XmlrpcAPI\obj\Debug\netcoreapp2.2\XmlrpcAPI.pdb
+C:\Users\Yasmine\Documents\kassa\Kassa\XmlrpcAPI\bin\Debug\netcoreapp2.2\XmlrpcAPI.deps.json
+C:\Users\Yasmine\Documents\kassa\Kassa\XmlrpcAPI\bin\Debug\netcoreapp2.2\XmlrpcAPI.runtimeconfig.json
+C:\Users\Yasmine\Documents\kassa\Kassa\XmlrpcAPI\bin\Debug\netcoreapp2.2\XmlrpcAPI.runtimeconfig.dev.json
+C:\Users\Yasmine\Documents\kassa\Kassa\XmlrpcAPI\bin\Debug\netcoreapp2.2\XmlrpcAPI.dll
+C:\Users\Yasmine\Documents\kassa\Kassa\XmlrpcAPI\bin\Debug\netcoreapp2.2\XmlrpcAPI.pdb
+C:\Users\Yasmine\Documents\kassa\Kassa\XmlrpcAPI\obj\Debug\netcoreapp2.2\XmlrpcAPI.csprojAssemblyReference.cache
+C:\Users\Yasmine\Documents\kassa\Kassa\XmlrpcAPI\obj\Debug\netcoreapp2.2\XmlrpcAPI.csproj.CoreCompileInputs.cache
+C:\Users\Yasmine\Documents\kassa\Kassa\XmlrpcAPI\obj\Debug\netcoreapp2.2\XmlrpcAPI.RazorAssemblyInfo.cache
+C:\Users\Yasmine\Documents\kassa\Kassa\XmlrpcAPI\obj\Debug\netcoreapp2.2\XmlrpcAPI.RazorAssemblyInfo.cs
+C:\Users\Yasmine\Documents\kassa\Kassa\XmlrpcAPI\obj\Debug\netcoreapp2.2\XmlrpcAPI.AssemblyInfoInputs.cache
+C:\Users\Yasmine\Documents\kassa\Kassa\XmlrpcAPI\obj\Debug\netcoreapp2.2\XmlrpcAPI.AssemblyInfo.cs
+C:\Users\Yasmine\Documents\kassa\Kassa\XmlrpcAPI\obj\Debug\netcoreapp2.2\XmlrpcAPI.RazorTargetAssemblyInfo.cache
+C:\Users\Yasmine\Documents\kassa\Kassa\XmlrpcAPI\obj\Debug\netcoreapp2.2\XmlrpcAPI.dll
+C:\Users\Yasmine\Documents\kassa\Kassa\XmlrpcAPI\obj\Debug\netcoreapp2.2\XmlrpcAPI.pdb

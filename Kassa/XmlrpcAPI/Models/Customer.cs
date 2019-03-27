@@ -7,10 +7,12 @@ namespace XmlrpcAPI.Models
 {
     public class Customer
     {
+        public string UUID { get; set; }
         public string Name { get; set; }
-        public string Street { get; set; }
-        public string City { get; set; }
-        public string Zip { get; set; }
         public string Email { get; set; }
+        public int Timestamp { get; set; }
+        public int Version { get; set; }
+        public bool Active { get; set; }
+        public bool Banned { get; set; }
     }
 }

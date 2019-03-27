@@ -15,15 +15,19 @@ namespace XmlrpcAPI.Controllers
     [ApiController]
     public class CustomerController : ControllerBase
     {
+        readonly string db = "testDB";
+        readonly string username = "ilja.de.rycke@student.ehb.be";
+        readonly string password = "test123";
+
         // GET: api/Customer
         [HttpGet]
-        public object[] Get()
+        public object[] GetCustomers()
         {
             IOpenErpLogin rpcClientLogin = XmlRpcProxyGen.Create<IOpenErpLogin>();
             rpcClientLogin.NonStandard = XmlRpcNonStandard.AllowStringFaultCode;
 
             //login
-            int userId = rpcClientLogin.Login("testDB", "ilja.de.rycke@student.ehb.be", "test123");
+            int userId = rpcClientLogin.Login(db, username, password);
 
             //if(userId > 0)
             //{
@@ -43,36 +47,40 @@ namespace XmlrpcAPI.Controllers
             //object[] fieldsParams = new object[2] { "name", "street" };
             //fields = new object[2] { "fields", fieldsParams };
 
-            object[] results = rpcField.Searchread("testDB", userId, "test123", "res.partner", "search_read", filter);
+            object[] results = rpcField.Searchread(db, userId, password, "res.partner", "search_read", filter);
 
             return results;
         }
 
         // GET: api/Customer/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        [HttpGet("{id}", Name = "GetCustomer")]
+        public string GetCustomer(int id)
         {
             return "value";
         }
 
         // POST: api/Customer
         [HttpPost]
-        public void Post([FromBody] Customer customer)
+        public void PostCustomer([FromBody] Customer customer)
         {
             IOpenErpLogin rpcClientLogin = XmlRpcProxyGen.Create<IOpenErpLogin>();
             rpcClientLogin.NonStandard = XmlRpcNonStandard.AllowStringFaultCode;
 
             //login
-            int userId = rpcClientLogin.Login("testDB", "ilja.de.rycke@student.ehb.be", "test123");
+            int userId = rpcClientLogin.Login(db, username, password);
 
             //Add Contacts(Customers)
             IOpenErpAddFields rpcField = XmlRpcProxyGen.Create<IOpenErpAddFields>();
             XmlRpcStruct addPairFields = new XmlRpcStruct();
+            addPairFields.Add("x_UUID", customer.UUID);
             addPairFields.Add("name", customer.Name);
-            addPairFields.Add("street", customer.Street);
-            addPairFields.Add("city", customer.City);
-            addPairFields.Add("zip", customer.Zip);
             addPairFields.Add("email", customer.Email);
+            addPairFields.Add("x_timestamp", customer.Timestamp);
+            addPairFields.Add("x_version", customer.Version);
+            addPairFields.Add("active", customer.Active);
+            addPairFields.Add("x_banned", customer.Banned);
+            addPairFields.Add("customer", true);
+
             int resAdd = rpcField.Create("testDB", userId, "test123", "res.partner", "create", addPairFields);
         }
 

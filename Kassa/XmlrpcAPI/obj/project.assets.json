@@ -14093,11 +14093,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Yasmine\\source\\repos\\Kassa\\XmlrpcAPI\\XmlrpcAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Yasmine\\Documents\\kassa\\Kassa\\XmlrpcAPI\\XmlrpcAPI.csproj",
       "projectName": "XmlrpcAPI",
-      "projectPath": "C:\\Users\\Yasmine\\source\\repos\\Kassa\\XmlrpcAPI\\XmlrpcAPI.csproj",
+      "projectPath": "C:\\Users\\Yasmine\\Documents\\kassa\\Kassa\\XmlrpcAPI\\XmlrpcAPI.csproj",
       "packagesPath": "C:\\Users\\Yasmine\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Yasmine\\source\\repos\\Kassa\\XmlrpcAPI\\obj\\",
+      "outputPath": "C:\\Users\\Yasmine\\Documents\\kassa\\Kassa\\XmlrpcAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

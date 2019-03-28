@@ -13,5 +13,15 @@ namespace XmlrpcAPI.Models
         public int Timestamp { get; set; }
         public int Version { get; set; }
         public bool Active { get; set; }
+
+        public Employee(string uuid, string name, string email, int timestamp, int version, bool active)
+        {
+            this.UUID = uuid;
+            this.Name = name;
+            this.Email = email;
+            this.Timestamp = timestamp;
+            this.Version = version;
+            this.Active = active;
+        }
     }
 }

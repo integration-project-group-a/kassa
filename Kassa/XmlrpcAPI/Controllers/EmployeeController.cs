@@ -33,7 +33,7 @@ namespace XmlrpcAPI.Controllers
 
             //get all employees by name
             object[] filter = new object[1];
-            filter[0] = new object[3] { "employee", "=", "true" };
+            filter[0] = new object[3] { "name", "=", "yasmine user" };
 
             //List fields = new object[1];
             //object[] fieldsParams = new object[2] { "name", "street" };
@@ -64,17 +64,21 @@ namespace XmlrpcAPI.Controllers
             //Add Contacts(Customers)
             IOpenErpAddFields rpcField = XmlRpcProxyGen.Create<IOpenErpAddFields>();
             XmlRpcStruct addPairFields = new XmlRpcStruct();
-            addPairFields.Add("x_UUID", "test123456789");
-            addPairFields.Add("name", "Yasmine employee");
-            addPairFields.Add("email", "yasmine@employee.be");
-            addPairFields.Add("x_timestamp", 123449383);
-            addPairFields.Add("x_version", 1);
-            addPairFields.Add("active", true);
+
+            addPairFields.Add("x_UUID", employee.UUID);
+            addPairFields.Add("name", employee.Name);
+            addPairFields.Add("email", employee.Email);
+            addPairFields.Add("x_timestamp", employee.Timestamp);
+            addPairFields.Add("x_version", employee.Version);
+            addPairFields.Add("active", employee.Active);
             addPairFields.Add("employee", true);
+            addPairFields.Add("login", employee.Email);
+            addPairFields.Add("sel_groups_1_9_10", 1);
+            addPairFields.Add("sel_groups_38_39", 38);
 
             int resAdd = rpcField.Create(db, userId, password, "res.users", "create", addPairFields);
 
-            return "employee created";
+            return "Employee created with id = " + resAdd;
         }
 
         // PUT: api/Employee/5

@@ -81,6 +81,8 @@ namespace XmlrpcAPI.Controllers
             addPairFields.Add("x_version", customer.Version);
             addPairFields.Add("active", customer.Active);
             addPairFields.Add("x_banned", customer.Banned);
+            //addPairFields.Add("phone", customer.GsmNumber);
+            //addPairFields.Add("x_dateofbirth", customer.DateOfBirth);
             addPairFields.Add("customer", true);
 
             int resAdd = rpcField.Create("testDB", userId, "test123", "res.partner", "create", addPairFields);

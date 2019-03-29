@@ -33,7 +33,7 @@ namespace XmlrpcAPI.Controllers
 
             //get all employees by name
             object[] filter = new object[1];
-            filter[0] = new object[3] { "name", "=", "yasmine user" };
+            filter[0] = new object[3] { "employee", "=", "true" };
 
             //List fields = new object[1];
             //object[] fieldsParams = new object[2] { "name", "street" };

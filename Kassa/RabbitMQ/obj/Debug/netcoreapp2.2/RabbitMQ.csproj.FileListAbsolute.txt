@@ -1,4 +1,0 @@
-C:\Users\Yasmine\Documents\kassa\Kassa\RabbitMQ\obj\Debug\netcoreapp2.2\RabbitMQ.csprojAssemblyReference.cache
-C:\Users\Yasmine\Documents\kassa\Kassa\RabbitMQ\obj\Debug\netcoreapp2.2\RabbitMQ.csproj.CoreCompileInputs.cache
-C:\Users\Yasmine\Documents\kassa\Kassa\RabbitMQ\obj\Debug\netcoreapp2.2\RabbitMQ.AssemblyInfoInputs.cache
-C:\Users\Yasmine\Documents\kassa\Kassa\RabbitMQ\obj\Debug\netcoreapp2.2\RabbitMQ.AssemblyInfo.cs

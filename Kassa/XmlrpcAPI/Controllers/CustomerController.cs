@@ -12,6 +12,7 @@ using XmlrpcAPI.Interfaces;
 using XmlrpcAPI.Models;
 
 //https://stackoverflow.com/questions/51404705/how-to-connect-or-login-with-odoo-using-c-sharp-code-and-after-connect-with-odo
+//test test test
 
 namespace XmlrpcAPI.Controllers
 {
@@ -95,6 +96,8 @@ namespace XmlrpcAPI.Controllers
             addPairFields.Add("x_version", customer.Version);
             addPairFields.Add("active", customer.Active);
             addPairFields.Add("x_banned", customer.Banned);
+            //addPairFields.Add("phone", customer.GsmNumber);
+            //addPairFields.Add("x_dateofbirth", customer.DateOfBirth);
             addPairFields.Add("customer", true);
 
             int resAdd = rpcField.Create("testDB", userId, "test123", "res.partner", "create", addPairFields);

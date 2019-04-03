@@ -53,13 +53,13 @@ namespace XmlrpcAPI.Controllers
             //fields = new object[2] { "fields", fieldsParams };
 
             XmlRpcStruct[] results = rpcField.Searchread(db, userId, password, "res.partner", "search_read", filter);
-            List<Dto.Customer> customers = new List<Dto.Customer>();
+            List<Dto.ShowCustomer> customers = new List<Dto.ShowCustomer>();
             foreach (var res in results)
             {
                 string test = JsonConvert.SerializeObject(res);
                 JObject jo = JObject.Parse(test);
 
-                Dto.Customer tempCustomer = new Dto.Customer(jo["name"].ToString(), jo["x_UUID"].ToString(), Int32.Parse(jo["x_timestamp"].ToString()),
+                Dto.ShowCustomer tempCustomer = new Dto.ShowCustomer(jo["name"].ToString(), jo["x_UUID"].ToString(), Int32.Parse(jo["x_timestamp"].ToString()),
                     Int32.Parse(jo["x_version"].ToString()), bool.Parse(jo["x_banned"].ToString()), bool.Parse(jo["active"].ToString()), 
                     jo["email"].ToString(), jo["mobile"].ToString(), jo["x_dateofbirth"].ToString(), jo["vat"].ToString());
                 customers.Add(tempCustomer);

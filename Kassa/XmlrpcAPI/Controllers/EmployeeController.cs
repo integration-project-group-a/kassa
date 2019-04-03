@@ -6,6 +6,8 @@ using Horizon.XmlRpc.Client;
 using Horizon.XmlRpc.Core;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using XmlrpcAPI.Interfaces;
 using XmlrpcAPI.Models;
 
@@ -21,7 +23,7 @@ namespace XmlrpcAPI.Controllers
 
         // GET: api/Employee
         [HttpGet]
-        public object[] GetEmployees()
+        public string GetEmployees()
         {
             IOpenErpLogin rpcClientLogin = XmlRpcProxyGen.Create<IOpenErpLogin>();
             rpcClientLogin.NonStandard = XmlRpcNonStandard.AllowStringFaultCode;
@@ -39,9 +41,18 @@ namespace XmlrpcAPI.Controllers
             //object[] fieldsParams = new object[2] { "name", "street" };
             //fields = new object[2] { "fields", fieldsParams };
 
-            object[] results = rpcField.Searchread(db, userId, password, "res.users", "search_read", filter);
+            XmlRpcStruct[] results = rpcField.Searchread(db, userId, password, "res.users", "search_read", filter);
+            List<Dto.ShowEmployee> employees = new List<Dto.ShowEmployee>();
+            foreach (var res in results)
+            {
+                string test = JsonConvert.SerializeObject(res);
+                JObject jo = JObject.Parse(test);
 
-            return results;
+                Dto.ShowEmployee tempEmployee = new Dto.ShowEmployee(jo["name"].ToString(), jo["email"].ToString(), Int32.Parse(jo["partner_id"][0].ToString()), jo["x_UUID"].ToString(),
+                    Int32.Parse(jo["x_timestamp"].ToString()), Int32.Parse(jo["x_version"].ToString()), bool.Parse(jo["x_banned"].ToString()), bool.Parse(jo["active"].ToString()));
+                employees.Add(tempEmployee);
+            }
+            return JsonConvert.SerializeObject(employees);
         }
 
         // GET: api/Employee/5

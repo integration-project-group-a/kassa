@@ -28,6 +28,7 @@ namespace XmlrpcAPI.Controllers
         [HttpGet]
         public string GetCustomers()
         {
+            TimeSpan start = DateTime.Now.TimeOfDay;
             IOpenErpLogin rpcClientLogin = XmlRpcProxyGen.Create<IOpenErpLogin>();
             rpcClientLogin.NonStandard = XmlRpcNonStandard.AllowStringFaultCode;
 
@@ -64,8 +65,9 @@ namespace XmlrpcAPI.Controllers
                     jo["email"].ToString(), jo["mobile"].ToString(), jo["x_dateofbirth"].ToString(), jo["vat"].ToString());
                 customers.Add(tempCustomer);
             }
-
-            return JsonConvert.SerializeObject(customers);
+            TimeSpan end = DateTime.Now.TimeOfDay;
+            TimeSpan delta = end - start;
+            return JsonConvert.SerializeObject(customers) + "\n" + delta.ToString();
             //return results;
         }
 

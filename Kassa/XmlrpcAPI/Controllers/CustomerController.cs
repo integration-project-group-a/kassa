@@ -75,6 +75,7 @@ namespace XmlrpcAPI.Controllers
         [HttpGet("{id}", Name = "GetCustomer")]
         public string GetCustomer(int id)
         {
+            //Test test test
             return "value";
         }
 

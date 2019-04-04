@@ -4248,23 +4248,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ilja\\.nuget\\packages\\": {},
+    "C:\\Users\\wardp\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ilja\\Documents\\GitHub\\kassa\\Kassa\\TaskCreator\\TaskCreator.csproj",
-      "projectName": "TaskCreator",
-      "projectPath": "C:\\Users\\Ilja\\Documents\\GitHub\\kassa\\Kassa\\TaskCreator\\TaskCreator.csproj",
-      "packagesPath": "C:\\Users\\Ilja\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ilja\\Documents\\GitHub\\kassa\\Kassa\\TaskCreator\\obj\\",
+      "projectUniqueName": "C:\\xampp\\htdocs\\kassa\\kassa\\Kassa\\TaskCreator\\Sender.csproj",
+      "projectName": "Sender",
+      "projectPath": "C:\\xampp\\htdocs\\kassa\\kassa\\Kassa\\TaskCreator\\Sender.csproj",
+      "packagesPath": "C:\\Users\\wardp\\.nuget\\packages\\",
+      "outputPath": "C:\\xampp\\htdocs\\kassa\\kassa\\Kassa\\TaskCreator\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Ilja\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\wardp\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -5,9 +5,9 @@ VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmlrpcAPI", "XmlrpcAPI\XmlrpcAPI.csproj", "{16DAB97B-FC18-4822-AF6B-838E4E4E71C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Worker", "Worker\Worker.csproj", "{B1014E25-145E-41FF-A2B5-837640022BF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Receiver", "Worker\Receiver.csproj", "{B1014E25-145E-41FF-A2B5-837640022BF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskCreator", "TaskCreator\TaskCreator.csproj", "{C918A732-A3E8-4BC5-91CF-2BC91760B3A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sender", "TaskCreator\Sender.csproj", "{C918A732-A3E8-4BC5-91CF-2BC91760B3A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

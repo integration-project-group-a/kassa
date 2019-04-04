@@ -14087,23 +14087,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ilja\\.nuget\\packages\\": {},
+    "C:\\Users\\wardp\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ilja\\Documents\\GitHub\\kassa\\Kassa\\XmlrpcAPI\\XmlrpcAPI.csproj",
+      "projectUniqueName": "C:\\xampp\\htdocs\\kassa\\kassa\\Kassa\\XmlrpcAPI\\XmlrpcAPI.csproj",
       "projectName": "XmlrpcAPI",
-      "projectPath": "C:\\Users\\Ilja\\Documents\\GitHub\\kassa\\Kassa\\XmlrpcAPI\\XmlrpcAPI.csproj",
-      "packagesPath": "C:\\Users\\Ilja\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ilja\\Documents\\GitHub\\kassa\\Kassa\\XmlrpcAPI\\obj\\",
+      "projectPath": "C:\\xampp\\htdocs\\kassa\\kassa\\Kassa\\XmlrpcAPI\\XmlrpcAPI.csproj",
+      "packagesPath": "C:\\Users\\wardp\\.nuget\\packages\\",
+      "outputPath": "C:\\xampp\\htdocs\\kassa\\kassa\\Kassa\\XmlrpcAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Ilja\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\wardp\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -8,9 +8,9 @@ namespace XmlrpcAPI.Dto
     
 [System.SerializableAttribute()]
 [System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+[System.Xml.Serialization.XmlTypeAttribute(TypeName = "Message")]
 [System.Xml.Serialization.XmlRootAttribute(Namespace = "", IsNullable = false)]
-public partial class Message
+public partial class Visitor
 {
     public MessageHeader header { get; set; }
     public MessageDatastructure datastructure { get; set; }
@@ -33,20 +33,20 @@ public partial class MessageHeader
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
 public partial class MessageDatastructure
 {
-    public object UUID { get; set; }
+    public string UUID { get; set; }
     public MessageDatastructureName name { get; set; }
-    public object email { get; set; }
-    public object timestamp { get; set; }
-    public object version { get; set; }
-    public object isActive { get; set; }
-    public object banned { get; set; }
-    public object birthdate { get; set; }
+    public string email { get; set; }
+    public string timestamp { get; set; }
+    public string version { get; set; }
+    public string isActive { get; set; }
+    public string banned { get; set; }
+    public string birthdate { get; set; }
     [System.Xml.Serialization.XmlElementAttribute("btw-nummer")]
-    public object btwnummer { get; set; }
+    public string btwnummer { get; set; }
     [System.Xml.Serialization.XmlElementAttribute("gsm-nummer")]
-    public object gsmnummer { get; set; }
-    public object GDPR { get; set; }
-    public object extraField { get; set; }
+    public string gsmnummer { get; set; }
+    public string GDPR { get; set; }
+    public string extraField { get; set; }
 }
 
 /// <remarks/>

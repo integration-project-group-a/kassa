@@ -25,7 +25,6 @@ namespace XmlrpcAPI.Controllers
         [HttpGet]
         public string GetEmployees()
         {
-            TimeSpan start = DateTime.Now.TimeOfDay;
             IOpenErpLogin rpcClientLogin = XmlRpcProxyGen.Create<IOpenErpLogin>();
             rpcClientLogin.NonStandard = XmlRpcNonStandard.AllowStringFaultCode;
 
@@ -43,8 +42,6 @@ namespace XmlrpcAPI.Controllers
             //fields = new object[2] { "fields", fieldsParams };
 
             XmlRpcStruct[] results = rpcField.Searchread(db, userId, password, "res.users", "search_read", filter);
-            TimeSpan end = DateTime.Now.TimeOfDay;
-            TimeSpan delta = end - start;
             List<Dto.ShowEmployee> employees = new List<Dto.ShowEmployee>();
             foreach (var res in results)
             {
@@ -57,7 +54,7 @@ namespace XmlrpcAPI.Controllers
             }
 
             
-            return JsonConvert.SerializeObject(employees) + "\n" + delta.ToString();
+            return JsonConvert.SerializeObject(employees) + "\n";
         }
 
         // GET: api/Employee/5

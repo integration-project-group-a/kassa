@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web.Http.Cors;
 using Horizon.XmlRpc.Client;
 using Horizon.XmlRpc.Core;
 using Microsoft.AspNetCore.Http;
@@ -16,6 +17,7 @@ using XmlrpcAPI.Models;
 
 namespace XmlrpcAPI.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     [Route("api/[controller]")]
     [ApiController]
     public class CustomerController : ControllerBase

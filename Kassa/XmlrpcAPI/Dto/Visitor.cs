@@ -38,14 +38,14 @@ public partial class MessageDatastructure
     public string email { get; set; }
     public string timestamp { get; set; }
     public string version { get; set; }
-    public string isActive { get; set; }
-    public string banned { get; set; }
-    public string birthdate { get; set; }
+    public bool isActive { get; set; }
+    public bool banned { get; set; }
+    public DateTime birthdate { get; set; }
     [System.Xml.Serialization.XmlElementAttribute("btw-nummer")]
     public string btwnummer { get; set; }
     [System.Xml.Serialization.XmlElementAttribute("gsm-nummer")]
     public string gsmnummer { get; set; }
-    public string GDPR { get; set; }
+    public bool GDPR { get; set; }
     public string extraField { get; set; }
 }
 

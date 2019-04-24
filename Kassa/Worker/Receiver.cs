@@ -8,13 +8,17 @@ using XmlrpcAPI.Models;
 using Newtonsoft.Json.Linq;
 using System.Xml.Serialization;
 using System.IO;
+using System.Net;
+using Flurl.Http;
+using System.Net.Http;
+using System.Net.Http.Headers;
 
 class Receiver
 {
     public static void Main()
     {
-        var factory = new ConnectionFactory() { HostName = "10.3.56.27", UserName = "manager", Password = "ehb" };
-        //var factory = new ConnectionFactory() { HostName = "localhost"};
+        //var factory = new ConnectionFactory() { HostName = "10.3.56.27", UserName = "manager", Password = "ehb" };
+        var factory = new ConnectionFactory() { HostName = "localhost"};
         using (var connection = factory.CreateConnection())
         using (var channel = connection.CreateModel())
         {
@@ -28,7 +32,7 @@ class Receiver
             Console.WriteLine(" [*] Waiting for logs.");
 
             var consumer = new EventingBasicConsumer(channel);
-            consumer.Received += (model, ea) =>
+            consumer.Received += async (model, ea) =>
             {
                 var body = ea.Body;
                 var message = Encoding.UTF8.GetString(body);
@@ -48,12 +52,24 @@ class Receiver
                         Console.WriteLine("\n\nMessageType: " + visitor.header.MessageType + "\nDescription: " + visitor.header.description + "\nSender: " + visitor.header.sender);
                         Console.WriteLine("UUID: " + visitor.datastructure.UUID + "\nFirst Name: " + visitor.datastructure.name.firstname + "\nLast Name: " + visitor.datastructure.name.lastname);
                         */
+                        
+                        string nameVisitor = visitor.datastructure.name.firstname + " " + visitor.datastructure.name.lastname;                    
+
+                        Customer valuesVisitor = new Customer(visitor.datastructure.UUID, nameVisitor, visitor.datastructure.email, Int32.Parse(visitor.datastructure.timestamp), Int32.Parse(visitor.datastructure.version), Convert.ToBoolean(visitor.datastructure.isActive), Convert.ToBoolean(visitor.datastructure.banned), null, DateTime.Now);
+                        
+                        var responseString = await "https://localhost:44389/api/Customer"
+                                    .WithHeader("Accept", "application/json")
+                                    .PostJsonAsync(valuesVisitor)
+                                    .ReceiveJson<object>();
+
+                        Console.WriteLine(responseString);
+
                         break;
+
                     default:
                         Console.WriteLine("An error has occurred.");
                         break;
                 }
-
                 
             };
             channel.BasicConsume(queue: queueName,

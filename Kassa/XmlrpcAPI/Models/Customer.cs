@@ -8,24 +8,19 @@ namespace XmlrpcAPI.Models
 {
     public class Customer
     {
-        [Required]
         public string UUID { get; set; }
-        [Required]
         public string Name { get; set; }
-        [Required]
         public string Email { get; set; }
-        [Required]
         public int Timestamp { get; set; }
-        [Required]
         public int Version { get; set; }
-        [Required]
         public bool Active { get; set; }
-        [Required]
         public bool Banned { get; set; }
-        public string GsmNumber {get; set;}
         public DateTime DateOfBirth { get; set; }
+        public string BtwNumber { get; set; }
+        public string GsmNumber {get; set;}
+        
 
-        public Customer(string uuid, string name, string email, int timestamp, int version, bool active, bool banned, string gsmNumber, DateTime dateOfBirth)
+        public Customer(string uuid, string name, string email, int timestamp, int version, bool active, bool banned, DateTime dateOfBirth, string btwNumber, string gsmNumber)
         {
             this.UUID = uuid;
             this.Name = name;
@@ -34,8 +29,10 @@ namespace XmlrpcAPI.Models
             this.Version = version;
             this.Active = active;
             this.Banned = banned;
-            this.GsmNumber = gsmNumber;
             this.DateOfBirth = dateOfBirth;
+            this.BtwNumber = btwNumber;
+            this.GsmNumber = gsmNumber;
+            
         }
     }
 }

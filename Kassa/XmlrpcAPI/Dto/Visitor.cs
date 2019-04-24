@@ -40,11 +40,12 @@ public partial class MessageDatastructure
     public string version { get; set; }
     public bool isActive { get; set; }
     public bool banned { get; set; }
-    public DateTime birthdate { get; set; }
+    [System.Xml.Serialization.XmlElementAttribute("geboortedatum")]
+    public string dateOfBirth { get; set; }
     [System.Xml.Serialization.XmlElementAttribute("btw-nummer")]
-    public string btwnummer { get; set; }
+    public string btwNumber { get; set; }
     [System.Xml.Serialization.XmlElementAttribute("gsm-nummer")]
-    public string gsmnummer { get; set; }
+    public string gsmNumber { get; set; }
     public bool GDPR { get; set; }
     public string extraField { get; set; }
 }

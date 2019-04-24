@@ -53,9 +53,21 @@ class Receiver
                         Console.WriteLine("UUID: " + visitor.datastructure.UUID + "\nFirst Name: " + visitor.datastructure.name.firstname + "\nLast Name: " + visitor.datastructure.name.lastname);
                         */
                         
-                        string nameVisitor = visitor.datastructure.name.firstname + " " + visitor.datastructure.name.lastname;                    
+                        string nameVisitor = visitor.datastructure.name.firstname + " " + visitor.datastructure.name.lastname;
+                        string d = visitor.datastructure.dateOfBirth;
+                        Console.WriteLine(visitor.datastructure.dateOfBirth.ToString());
+                        
 
-                        Customer valuesVisitor = new Customer(visitor.datastructure.UUID, nameVisitor, visitor.datastructure.email, Int32.Parse(visitor.datastructure.timestamp), Int32.Parse(visitor.datastructure.version), Convert.ToBoolean(visitor.datastructure.isActive), Convert.ToBoolean(visitor.datastructure.banned), null, DateTime.Now);
+                        Customer valuesVisitor = new Customer(visitor.datastructure.UUID, 
+                                                              nameVisitor, 
+                                                              visitor.datastructure.email, 
+                                                              Int32.Parse(visitor.datastructure.timestamp), 
+                                                              Int32.Parse(visitor.datastructure.version), 
+                                                              Convert.ToBoolean(visitor.datastructure.isActive), 
+                                                              Convert.ToBoolean(visitor.datastructure.banned), 
+                                                              DateTime.Parse(visitor.datastructure.dateOfBirth), 
+                                                              visitor.datastructure.btwNumber, 
+                                                              visitor.datastructure.gsmNumber);
                         
                         var responseString = await "https://localhost:44389/api/Customer"
                                     .WithHeader("Accept", "application/json")

@@ -8,7 +8,7 @@ namespace XmlrpcAPI.Dto
     
 [System.SerializableAttribute()]
 [System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(TypeName = "Message")]
+[System.Xml.Serialization.XmlTypeAttribute(TypeName = "message")]
 [System.Xml.Serialization.XmlRootAttribute(Namespace = "", IsNullable = false)]
 public partial class Visitor
 {
@@ -23,7 +23,7 @@ public partial class Visitor
 public partial class MessageHeader
 {
 
-    public string MessageType { get; set; }
+    public string messageType { get; set; }
     public string description { get; set; }
     public string sender { get; set; }
 }

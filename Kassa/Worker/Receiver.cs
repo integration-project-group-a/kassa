@@ -53,10 +53,7 @@ class Receiver
                         Console.WriteLine("UUID: " + visitor.datastructure.UUID + "\nFirst Name: " + visitor.datastructure.name.firstname + "\nLast Name: " + visitor.datastructure.name.lastname);
                         */
                         
-                        string nameVisitor = visitor.datastructure.name.firstname + " " + visitor.datastructure.name.lastname;
-                        string d = visitor.datastructure.dateOfBirth;
-                        Console.WriteLine(visitor.datastructure.dateOfBirth.ToString());
-                        
+                        string nameVisitor = visitor.datastructure.name.firstname + " " + visitor.datastructure.name.lastname;                  
 
                         Customer valuesVisitor = new Customer(visitor.datastructure.UUID, 
                                                               nameVisitor, 
@@ -98,10 +95,10 @@ class Receiver
         string MessageType = "";
         //https://stackoverflow.com/questions/10709821/find-text-in-string-with-c-sharp
         int Start, End;
-        if (message.Contains("<MessageType>") && message.Contains("</MessageType>"))
+        if (message.Contains("<messageType>") && message.Contains("</messageType>"))
         {
-            Start = message.IndexOf("<MessageType>", 0) + "<MessageType>".Length;
-            End = message.IndexOf("</MessageType>", Start);
+            Start = message.IndexOf("<messageType>", 0) + "<messageType>".Length;
+            End = message.IndexOf("</messageType>", Start);
             MessageType = message.Substring(Start, End - Start);
         }
         return MessageType;

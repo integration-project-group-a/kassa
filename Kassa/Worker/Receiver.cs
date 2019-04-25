@@ -17,8 +17,8 @@ class Receiver
 {
     public static void Main()
     {
-        //var factory = new ConnectionFactory() { HostName = "10.3.56.27", UserName = "manager", Password = "ehb" };
-        var factory = new ConnectionFactory() { HostName = "localhost"};
+        var factory = new ConnectionFactory() { HostName = "10.3.56.27", UserName = "manager", Password = "ehb" };
+        //var factory = new ConnectionFactory() { HostName = "localhost"};
         using (var connection = factory.CreateConnection())
         using (var channel = connection.CreateModel())
         {

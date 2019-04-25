@@ -20,5 +20,7 @@ namespace XmlrpcAPI.Interfaces
         int Countsearch(string dbName, int userId, string dbPwd, string model, string method, object[] filter);  //works!!!
         [XmlRpcMethod("execute")]
         XmlRpcStruct[] Searchread(string dbName, int userId, string dbPwd, string model, string method, object[] filter);
+        [XmlRpcMethod("execute")]
+        XmlRpcStruct SearchreadUUID(string dbName, int userId, string dbPwd, string model, string method, object[] filter);
     }
 }

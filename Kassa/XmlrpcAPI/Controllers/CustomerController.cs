@@ -74,8 +74,40 @@ namespace XmlrpcAPI.Controllers
         [HttpGet("{id}", Name = "GetCustomer")]
         public string GetCustomer(int id)
         {
-            //Test test test
-            return "value";
+            IOpenErpLogin rpcClientLogin = XmlRpcProxyGen.Create<IOpenErpLogin>();
+            rpcClientLogin.NonStandard = XmlRpcNonStandard.AllowStringFaultCode;
+
+            //login
+            int userId = rpcClientLogin.Login(db, username, password);
+
+            //if(userId > 0)
+            //{
+            //    return "login ok";
+            //} else
+            //{
+            //    return "login failed";
+            //}
+
+            IOpenErpAddFields rpcField = XmlRpcProxyGen.Create<IOpenErpAddFields>();
+
+            //get all customers
+            object[] filter = new object[1];
+            filter[0] = new object[3] { "x_UUID", "=", id };
+
+            XmlRpcStruct[] results = rpcField.Searchread(db, userId, password, "res.partner", "search_read", filter);
+            List<Dto.ShowCustomer> customers = new List<Dto.ShowCustomer>();
+            foreach (var res in results)
+            {
+                string test = JsonConvert.SerializeObject(res);
+                JObject jo = JObject.Parse(test);
+
+                Dto.ShowCustomer tempCustomer = new Dto.ShowCustomer(jo["name"].ToString(), jo["x_UUID"].ToString(), Int32.Parse(jo["x_timestamp"].ToString()),
+                    Int32.Parse(jo["x_version"].ToString()), bool.Parse(jo["x_banned"].ToString()), bool.Parse(jo["active"].ToString()),
+                    jo["email"].ToString(), jo["mobile"].ToString(), jo["x_dateofbirth"].ToString(), jo["vat"].ToString());
+                customers.Add(tempCustomer);
+            }
+            return JsonConvert.SerializeObject(customers) + "\n";
+            //return results;
         }
 
         // POST: api/Customer

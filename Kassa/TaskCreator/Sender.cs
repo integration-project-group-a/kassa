@@ -6,8 +6,8 @@ class Sender
     public static void Main(string[] args)
     {
 
-        //var factory = new ConnectionFactory() { HostName = "10.3.56.27", UserName = "manager", Password = "ehb" };
-        var factory = new ConnectionFactory() { HostName = "localhost" };
+        var factory = new ConnectionFactory() { HostName = "10.3.56.27", UserName = "manager", Password = "ehb" };
+        //var factory = new ConnectionFactory() { HostName = "localhost" };
         using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())
             {
@@ -28,9 +28,9 @@ class Sender
 
         private static string GetMessage(string[] args)
         {
-            string xml = @"<Message>
+            string xml = @"<message>
 	                        <header>
-		                    <MessageType>Visitor</MessageType>
+		                    <messageType>Visitor</messageType>
 		                    <description>Creation of a visitor</description>
 		                    <sender>front-end</sender>
 	                        </header>
@@ -51,7 +51,7 @@ class Sender
 		                    <gsm-nummer>015313164165468</gsm-nummer>
 		                    <extraField></extraField>
 	                        </datastructure>
-                           </Message>";
+                           </message>";
             return ((args.Length > 0)
                    ? string.Join(" ", args)
                    : xml);

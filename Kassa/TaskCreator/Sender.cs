@@ -46,7 +46,7 @@ class Sender
 		                    <version>1</version>
 		                    <isActive>true</isActive>
 		                    <banned>false</banned><!-- Not required fields -->
-		                    <geboortedatum>30/04/1999</geboortedatum>
+		                    <geboortedatum>1999-04-30</geboortedatum>
 		                    <btw-nummer>BE15656464654</btw-nummer>
 		                    <gsm-nummer>015313164165468</gsm-nummer>
 		                    <extraField></extraField>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web.Http.Cors;
 using Horizon.XmlRpc.Client;
 using Horizon.XmlRpc.Core;
 using Microsoft.AspNetCore.Http;
@@ -16,6 +17,7 @@ using XmlrpcAPI.Models;
 
 namespace XmlrpcAPI.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     [Route("api/[controller]")]
     [ApiController]
     public class CustomerController : ControllerBase
@@ -28,7 +30,6 @@ namespace XmlrpcAPI.Controllers
         [HttpGet]
         public string GetCustomers()
         {
-            TimeSpan start = DateTime.Now.TimeOfDay;
             IOpenErpLogin rpcClientLogin = XmlRpcProxyGen.Create<IOpenErpLogin>();
             rpcClientLogin.NonStandard = XmlRpcNonStandard.AllowStringFaultCode;
 
@@ -65,9 +66,7 @@ namespace XmlrpcAPI.Controllers
                     jo["email"].ToString(), jo["mobile"].ToString(), jo["x_dateofbirth"].ToString(), jo["vat"].ToString());
                 customers.Add(tempCustomer);
             }
-            TimeSpan end = DateTime.Now.TimeOfDay;
-            TimeSpan delta = end - start;
-            return JsonConvert.SerializeObject(customers) + "\n" + delta.ToString();
+            return JsonConvert.SerializeObject(customers) + "\n";
             //return results;
         }
 
@@ -75,6 +74,7 @@ namespace XmlrpcAPI.Controllers
         [HttpGet("{id}", Name = "GetCustomer")]
         public string GetCustomer(int id)
         {
+            //Test test test
             return "value";
         }
 
@@ -98,8 +98,9 @@ namespace XmlrpcAPI.Controllers
             addPairFields.Add("x_version", customer.Version);
             addPairFields.Add("active", customer.Active);
             addPairFields.Add("x_banned", customer.Banned);
-            //addPairFields.Add("phone", customer.GsmNumber);
-            //addPairFields.Add("x_dateofbirth", customer.DateOfBirth);
+            addPairFields.Add("x_dateofbirth", customer.DateOfBirth);
+            addPairFields.Add("vat", customer.BtwNumber);
+            addPairFields.Add("phone", customer.GsmNumber);
             addPairFields.Add("customer", true);
 
             int resAdd = rpcField.Create("testDB", userId, "test123", "res.partner", "create", addPairFields);

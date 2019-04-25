@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -14,11 +15,12 @@ namespace XmlrpcAPI.Models
         public int Version { get; set; }
         public bool Active { get; set; }
         public bool Banned { get; set; }
-        public string GsmNumber {get; set;}
         public DateTime DateOfBirth { get; set; }
+        public string BtwNumber { get; set; }
+        public string GsmNumber {get; set;}
+        
 
-
-        public Customer(string uuid, string name, string email, int timestamp, int version, bool active, bool banned, string gsmNumber, DateTime dateOfBirth)
+        public Customer(string uuid, string name, string email, int timestamp, int version, bool active, bool banned, DateTime dateOfBirth, string btwNumber, string gsmNumber)
         {
             this.UUID = uuid;
             this.Name = name;
@@ -27,8 +29,10 @@ namespace XmlrpcAPI.Models
             this.Version = version;
             this.Active = active;
             this.Banned = banned;
-            this.GsmNumber = gsmNumber;
             this.DateOfBirth = dateOfBirth;
+            this.BtwNumber = btwNumber;
+            this.GsmNumber = gsmNumber;
+            
         }
     }
 }

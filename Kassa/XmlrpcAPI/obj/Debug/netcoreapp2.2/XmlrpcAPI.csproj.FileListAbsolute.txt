@@ -54,3 +54,17 @@ C:\xampp\htdocs\kassa\kassa\Kassa\XmlrpcAPI\obj\Debug\netcoreapp2.2\XmlrpcAPI.As
 C:\xampp\htdocs\kassa\kassa\Kassa\XmlrpcAPI\obj\Debug\netcoreapp2.2\XmlrpcAPI.RazorTargetAssemblyInfo.cache
 C:\xampp\htdocs\kassa\kassa\Kassa\XmlrpcAPI\obj\Debug\netcoreapp2.2\XmlrpcAPI.dll
 C:\xampp\htdocs\kassa\kassa\Kassa\XmlrpcAPI\obj\Debug\netcoreapp2.2\XmlrpcAPI.pdb
+E:\Software\Github\Repositories\kassa\Kassa\XmlrpcAPI\bin\Debug\netcoreapp2.2\XmlrpcAPI.deps.json
+E:\Software\Github\Repositories\kassa\Kassa\XmlrpcAPI\bin\Debug\netcoreapp2.2\XmlrpcAPI.runtimeconfig.json
+E:\Software\Github\Repositories\kassa\Kassa\XmlrpcAPI\bin\Debug\netcoreapp2.2\XmlrpcAPI.runtimeconfig.dev.json
+E:\Software\Github\Repositories\kassa\Kassa\XmlrpcAPI\bin\Debug\netcoreapp2.2\XmlrpcAPI.dll
+E:\Software\Github\Repositories\kassa\Kassa\XmlrpcAPI\bin\Debug\netcoreapp2.2\XmlrpcAPI.pdb
+E:\Software\Github\Repositories\kassa\Kassa\XmlrpcAPI\obj\Debug\netcoreapp2.2\XmlrpcAPI.csprojAssemblyReference.cache
+E:\Software\Github\Repositories\kassa\Kassa\XmlrpcAPI\obj\Debug\netcoreapp2.2\XmlrpcAPI.csproj.CoreCompileInputs.cache
+E:\Software\Github\Repositories\kassa\Kassa\XmlrpcAPI\obj\Debug\netcoreapp2.2\XmlrpcAPI.RazorAssemblyInfo.cache
+E:\Software\Github\Repositories\kassa\Kassa\XmlrpcAPI\obj\Debug\netcoreapp2.2\XmlrpcAPI.RazorAssemblyInfo.cs
+E:\Software\Github\Repositories\kassa\Kassa\XmlrpcAPI\obj\Debug\netcoreapp2.2\XmlrpcAPI.AssemblyInfoInputs.cache
+E:\Software\Github\Repositories\kassa\Kassa\XmlrpcAPI\obj\Debug\netcoreapp2.2\XmlrpcAPI.AssemblyInfo.cs
+E:\Software\Github\Repositories\kassa\Kassa\XmlrpcAPI\obj\Debug\netcoreapp2.2\XmlrpcAPI.RazorTargetAssemblyInfo.cache
+E:\Software\Github\Repositories\kassa\Kassa\XmlrpcAPI\obj\Debug\netcoreapp2.2\XmlrpcAPI.dll
+E:\Software\Github\Repositories\kassa\Kassa\XmlrpcAPI\obj\Debug\netcoreapp2.2\XmlrpcAPI.pdb
